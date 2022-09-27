@@ -1,0 +1,43 @@
+.dropzoneForm {
+    height: 16rem;
+    width: 28rem;
+    max-width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.dropzoneInput {
+    display: none;
+}
+
+.dropzoneLabel {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-width: 2px;
+    border-radius: 1rem;
+    border-style: dashed;
+    border-color: #2c3434;
+    background-color: #111313;
+}
+
+.dragElement {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    border-radius: 1rem;
+    border-style: dashed;
+    border-color: #2c3434;
+    background-color: #111313;
+}
+
+.dropzoneText {
+    color: #fbfdff;
+    font-family: 'Oswald', sans-serif;
+    background-color: #111313;
+}

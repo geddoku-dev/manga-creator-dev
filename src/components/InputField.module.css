@@ -1,0 +1,21 @@
+.input {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 100%;
+}
+
+.inputField {
+  width: 100%;
+  padding: 12px 12px;
+  margin: 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: aliceblue;
+}
+
+.label {
+  text-align: start;
+  display: inline-block;
+}
