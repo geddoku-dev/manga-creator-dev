@@ -1,4 +1,4 @@
-import { ChangeEvent, HTMLInputTypeAttribute, Dispatch, SetStateAction } from "react";
+import { ChangeEvent, HTMLInputTypeAttribute, Dispatch, SetStateAction, ReactNode } from "react";
 
 export interface IDropzone {
   onFilesLoad: (files: FileList) => void;
@@ -23,8 +23,9 @@ export interface MangaUploaderProps {
 }
 
 export interface Step {
+  key: string;
   title: string;
-  element: (stepProps: StepProps) => JSX.Element;
+  element: JSX.Element;
 }
 
 export interface StepProps {
@@ -34,4 +35,5 @@ export interface StepProps {
   isLast: boolean;
   isFirst: boolean;
   step: number;
+  element: JSX.Element | undefined | null;
 }

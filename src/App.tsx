@@ -1,7 +1,8 @@
 import React from "react";
 import Modal from "./components/GeneralInfo/Modal";
 
-import { MangaUploader } from './components/MangaUploader/MangaUploader';
+import { MangaUploader } from "./components/MangaUploader/MangaUploader";
+import { Upload } from "./components/Upload/Upload";
 
 function App() {
   const [open, setOpen] = React.useState<boolean>(false);
@@ -12,15 +13,17 @@ function App() {
         Start
       </button>
       {open && <Modal setOpen={setOpen} />} */}
-      <MangaUploader 
+      <MangaUploader
         steps={[
           {
+            key: "General Information",
             title: "General Information",
-            element: ({ goNextStep, goPreviousStep }) => <Modal setOpen={setOpen} />,
+            element: <Modal setOpen={setOpen} />,
           },
           {
-            title: "Uploading Files",
-            element: ({ goNextStep, goPreviousStep }) => <>Uploading Files</>,
+            key: "Files Upload",
+            title: "Files Upload",
+            element: <Upload />,
           },
         ]}
       />

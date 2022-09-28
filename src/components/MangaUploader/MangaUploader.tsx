@@ -1,6 +1,7 @@
 import React from "react";
 import { MangaUploaderProps } from "../../../types";
 import styles from "./MangaUploader.module.css";
+import Step from "../Step/Step";
 
 export function MangaUploader({ steps }: MangaUploaderProps) {
   const [currentStep, setCurrentStep] = React.useState<number>(1);
@@ -24,13 +25,15 @@ export function MangaUploader({ steps }: MangaUploaderProps) {
       <div className={styles.shadow} />
       {steps?.map((step, idx) => (
         <div>
-          <step.element
+          <Step
+            key={idx}
             step={idx + 1}
             goNextStep={goNextStep}
             goPreviousStep={goPreviousStep}
             currentStep={currentStep}
             isFirst={idx === 0}
             isLast={idx === steps.length - 1}
+            element={step.element}
           />
         </div>
       ))}
