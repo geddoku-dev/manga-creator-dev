@@ -1,8 +1,8 @@
 import React from "react";
-
+import { IDropzone } from "../../../types";
 import styles from "./Dropzone.module.css";
 
-export default function Dropzone() {
+export default function Dropzone({ onFilesLoad, files }: IDropzone) {
   const [drag, setDrag] = React.useState<boolean>(false);
 
   function handleDrag(
@@ -23,7 +23,7 @@ export default function Dropzone() {
     setDrag(false);
 
     if (event.dataTransfer.files && event.dataTransfer.files[0]) {
-      console.log(event.dataTransfer.files);
+      onFilesLoad(event.dataTransfer.files);
     }
   }
 
@@ -31,7 +31,6 @@ export default function Dropzone() {
     event.preventDefault();
 
     if (event.target.files && event.target.files[0]) {
-      console.log(event.target.files);
     }
   }
 
@@ -48,10 +47,10 @@ export default function Dropzone() {
         onChange={handleChange}
       />
       <label className={styles.dropzoneLabel}>
-          <div>
-            <p className={styles.dropzoneText}>Drag-n-Drop to upload</p>
-          </div>
-        </label>
+        <div>
+          <p className={styles.dropzoneText}>Drag-n-Drop to upload</p>
+        </div>
+      </label>
       {drag && (
         <div
           className={styles.dragElement}

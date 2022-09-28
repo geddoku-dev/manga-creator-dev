@@ -1,15 +1,37 @@
-import { ChangeEvent, HTMLInputTypeAttribute } from "react";
+import { ChangeEvent, HTMLInputTypeAttribute, Dispatch, SetStateAction } from "react";
 
-export interface IDropzone {}
+export interface IDropzone {
+  onFilesLoad: (files: FileList) => void;
+  files: File[] | undefined;
+}
 
 export interface IModal {
   setOpen: (state: boolean) => void;
 }
 
 export interface IInputField {
-  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
+  onChange: (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
   value: string | number;
   name: string;
   placeholder?: string | undefined;
-  inputType: HTMLInputTypeAttribute;
+  inputType?: HTMLInputTypeAttribute;
+  textarea?: boolean;
+}
+
+export interface MangaUploaderProps {
+  steps: Step[];
+}
+
+export interface Step {
+  title: string;
+  element: (stepProps: StepProps) => JSX.Element;
+}
+
+export interface StepProps {
+  goNextStep: () => void;
+  goPreviousStep: () => void;
+  currentStep: number;
+  isLast: boolean;
+  isFirst: boolean;
+  step: number;
 }
