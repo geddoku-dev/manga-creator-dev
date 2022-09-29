@@ -40,7 +40,7 @@
 }
 
 .previous.previousDisabled {
-  cursor: not-allowed;
+  cursor: auto;
   background: #dedede;
 }
 
@@ -54,5 +54,19 @@
   border: none;
   color: #fff;
   background: #5a5afc;
+  transition: all 0.25s ease;
+}
+
+.genresButton {
+  margin-top: 10px;
+  width: 100%;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 11px 28px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  border: none;
+  color: #2c3e50;
+  background: #fcfcfc;
   transition: all 0.25s ease;
 }

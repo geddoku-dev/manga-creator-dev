@@ -2,6 +2,7 @@ import React from "react";
 import { IModal } from "../../../types";
 
 import InputField from "../InputField/InputField";
+import TagsInput from "../TagsInput/TagsInput";
 
 export default function Modal({ setOpen }: IModal) {
   const [title, setTitle] = React.useState<string>("");
@@ -22,6 +23,7 @@ export default function Modal({ setOpen }: IModal) {
         value={description}
         textarea
       />
+      <TagsInput />
     </>
   );
 }

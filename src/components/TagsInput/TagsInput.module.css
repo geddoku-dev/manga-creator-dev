@@ -1,0 +1,67 @@
+.tagsWrapper {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  min-height: 48px;
+  padding: 0 8px;
+  margin: 12px 8px;
+  border: 1px solid rgb(214, 216, 218);
+  border-radius: 6px;
+}
+
+.tagsInputField {
+  flex: 1;
+  border: none;
+  outline: none;
+  height: 46px;
+  font-size: 14px;
+  padding: 4px 0 0 4px;
+  color: aliceblue;
+}
+
+.tagCloseIcon {
+  display: block;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  text-align: center;
+  font-size: 12px;
+  margin-left: 8px;
+  color: #0052cc;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 8px 0 0 0;
+  list-style-type: none;
+}
+
+.tag {
+  width: auto;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 0 8px;
+  list-style: none;
+  border-radius: 6px;
+  margin: 0 8px 8px 0;
+  background: #7070fc;
+}
+
+.tagTitle {
+  margin-top: 3px;
+  font-size: 16px;
+  background: #7070fc;
+}
+
+.sectionTitle {
+  text-align: start;
+  margin: 0 8px;
+}
