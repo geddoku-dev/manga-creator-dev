@@ -1,0 +1,1 @@
+export const typeOfUploadItem = ['Manga', 'Manhwa', 'Manhua'];

@@ -10,12 +10,6 @@ export default function Step({
   step,
   element,
 }: StepProps) {
-  console.log({
-    currentStep,
-    step,
-    isFirst,
-  });
-
   if (step !== currentStep) {
     return <></>;
   }
